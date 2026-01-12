@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0a0e27;
+    --bg-light: #151933;
+    --text: #e8e6e3;
+    --text-light: #a8a29e;
+    --border: #2d3348;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --hover: #1e2238;
+    --cosmic-purple: #8b5cf6;
+    --cosmic-blue: #3b82f6;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    margin-bottom: 60px;
+    background: rgba(10, 14, 39, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: var(--accent-light);
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-light);
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.hero {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, var(--accent-light), var(--cosmic-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.posts h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--accent-light);
+}
+
+.post-card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    background: var(--bg-light);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
+}
+
+.post-card a {
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+}
+
+.post-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.post-card .meta {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.post-card p {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+#pagination button {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    background: var(--bg-light);
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+#pagination button:hover:not(:disabled) {
+    background: var(--hover);
+    border-color: var(--accent);
+}
+
+#pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#pagination button.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+footer {
+    margin-top: 80px;
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* CV Styles */
+.cv {
+    max-width: 800px;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cv-header .profile-img {
+    width: 120px;
+    height: 120px;
+}
+
+.cv-header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.cv-header .title {
+    font-size: 20px;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact a {
+    color: var(--accent-light);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.contact a:hover {
+    opacity: 0.7;
+}
+
+.cv-section {
+    margin-bottom: 50px;
+}
+
+.cv-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent-light);
+}
+
+.cv-item {
+    margin-bottom: 30px;
+}
+
+.cv-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.cv-item .meta {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.cv-item ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.cv-item li {
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.cv-item p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    padding: 6px 14px;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-light);
+    transition: all 0.2s;
+}
+
+.skills span:hover {
+    border-color: var(--accent);
+    color: var(--accent-light);
+}
+
+/* Post Page Styles */
+.post-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.post-header h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.post-content {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.post-content h2 {
+    font-size: 28px;
+    margin: 40px 0 20px;
+    color: var(--accent-light);
+}
+
+.post-content h3 {
+    font-size: 22px;
+    margin: 30px 0 15px;
+    color: var(--text);
+}
+
+.post-content p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.post-content em {
+    color: var(--text);
+}
+
+.post-content strong {
+    color: var(--text);
+}
+
+.post-content code {
+    background: var(--bg-light);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: var(--accent-light);
+    border: 1px solid var(--border);
+}
+
+.post-content pre {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+}
+
+.post-content ul, .post-content ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.post-content li {
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.post-content a {
+    color: var(--accent-light);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.post-content a:hover {
+    border-bottom-color: var(--accent-light);
+}
+
+.post-content .meta {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .cv-header h1 {
+        font-size: 28px;
+    }
+    
+    .post-header h1 {
+        font-size: 28px;
+    }
+    
+    .nav-links a {
+        margin-left: 20px;
+    }
+}
